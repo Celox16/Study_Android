@@ -12,9 +12,15 @@ class FragmentActivity : AppCompatActivity() {
         Log.d("life_cycle", "onCreate")
         setContentView(R.layout.activity_fragment)
 
+        val fragmentOne: FragmentOne = FragmentOne()
+        // fragment에 data를 넣어주는 방법
+        val bundle:Bundle = Bundle()
+        bundle.putString("hello", "hello")
+        fragmentOne.arguments = bundle
+
         button.setOnClickListener {
             // fragment를 동적으로 작동하는 방법
-            val fragmentOne : FragmentOne = FragmentOne()
+            // fragment 붙이는 방법 replace//add
             val fragmentManager: FragmentManager = supportFragmentManager // Activity가 가지고 있음
 
             // Transaction
@@ -25,6 +31,15 @@ class FragmentActivity : AppCompatActivity() {
             // 1. commit -> 시간 될 때 해(좀 더 안정적)
             // 2. commitnow -> 지금 당장
             // 3. commitAllowingStateLoss -> 커밋이 안될수도 있음 그래도 상관없이 하겠다는 것
+        }
+        button2.setOnClickListener {
+            // fragment remove/detatch 하는 방법
+            // remove 는 다시 붙일 수 있음
+            // detach 는 다시 붙일 수 없음 (거의 이거를 사용)
+            val fragmentManager = supportFragmentManager
+            val fragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.remove(fragmentOne)
+            fragmentTransaction.commit()
         }
 
     }
