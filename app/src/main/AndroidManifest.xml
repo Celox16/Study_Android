@@ -10,11 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Study_Android">
         <activity
-            android:name=".Intent2"
-            android:exported="true" />
-        <activity
-            android:name=".Intent1"
+            android:name=".FragmentActivity"
             android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +20,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Calc_summary"
+            android:name=".OpenInternet"
             android:exported="true">
+
         </activity>
+        <activity
+            android:name=".Intent2"
+            android:exported="true" />
+        <activity
+            android:name=".Intent1"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Calc_summary"
+            android:exported="true" />
         <activity
             android:name=".Listener"
             android:exported="true" />

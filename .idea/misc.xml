@@ -5,10 +5,13 @@
       <map>
         <entry key="..\:/Users/park/AndroidStudioProjects/Study_Android/app/src/main/res/layout/activity_listener.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_calc_summary.xml" value="0.17708333333333334" />
+        <entry key="app/src/main/res/layout/activity_fragment.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/layout/activity_intent.xml" value="0.2046875" />
         <entry key="app/src/main/res/layout/activity_intent2.xml" value="0.2046875" />
         <entry key="app/src/main/res/layout/activity_listener.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_open_internet.xml" value="0.165" />
         <entry key="app/src/main/res/layout/calc.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_one.xml" value="0.17916666666666667" />
       </map>
     </option>
   </component>

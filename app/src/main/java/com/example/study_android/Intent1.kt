@@ -1,6 +1,7 @@
 package com.example.study_android
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,6 +30,8 @@ class Intent1 : AppCompatActivity() {
             startActivity(intent2)*/
 
             // 암시적 인텐트
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://m.naver.com")) // ACTION_VIEW 오른쪽에 있는 것을 보여주는것
+            startActivity(intent)
        }
     }
 
