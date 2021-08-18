@@ -8,6 +8,9 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_listener.*
 
 class Listener : AppCompatActivity() {
+
+    var number = 10
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listener)
@@ -31,16 +34,20 @@ class Listener : AppCompatActivity() {
             }
         })
 
-        // 3. 이름이 필요한 경우(Click)
+        // 3. 이름이 필요한 경우(Click) // 가장 마지막에 적용된 리스너가 적용된다.
         val click = object : View.OnClickListener{
             override fun onClick(p0: View?) {
                 Log.d("click","clicked")
+                hello.setText("안녕하세요") //set text
+                image.setImageResource(R.drawable.ic_launcher_background)
+                number += 10
+                Log.d("number", "" + number)
             }
         }
         hello.setOnClickListener(click)
 
         // 뷰를 조작하는 함수들
-        hello
-
+        // set text
+        // setImageResource
     }
 }
